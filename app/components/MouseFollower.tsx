@@ -42,6 +42,11 @@ export function MouseFollower(){
 
         rafId.current = requestAnimationFrame(step)
 
+        return()=>{
+            if(rafId.current !==null){
+                cancelAnimationFrame(rafId.current)
+            }
+        }
     },[])
     
     return(
