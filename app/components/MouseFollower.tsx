@@ -19,8 +19,10 @@ export function MouseFollower(){
     
     useEffect(()=>{
         if(!div.current)return
+
         let transform = {x:0,y:0}
         let before:number|null = null
+
         const step=(now:number)=>{
             if(before === null){
                 before = now
@@ -34,11 +36,11 @@ export function MouseFollower(){
             transform.y += (pos.current.y - transform.y)*factor
 
             div.current!.style.transform = `translate(${transform.x}px, ${transform.y}px)`
+            
             rafId.current = requestAnimationFrame(step)
-
         }
-        rafId.current = requestAnimationFrame(step)
 
+        rafId.current = requestAnimationFrame(step)
 
     },[])
     
