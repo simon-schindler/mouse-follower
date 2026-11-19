@@ -1,0 +1,11 @@
+.div{
+    position: fixed;
+    width: 20px;
+    aspect-ratio: 1;
+    left: -10px;
+    top: -10px;
+
+    border-radius: 50%;
+    background: var(--foreground);
+    pointer-events: none;
+}
